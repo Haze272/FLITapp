@@ -9,16 +9,16 @@
         android:id="@+id/LoadScreenLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_bold"
+        android:fontFamily="@font/inter"
         android:text="FLIT"
-        android:textColor="@color/black"
+        android:textColor="@color/headerTeal"
+        android:textFontWeight="700"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -39,23 +39,55 @@
         android:text="Идеальная платформа для заказчиков и исполнителей в IT"
         android:textAlignment="center"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoadScreenLogo"
-        tools:layout_editor_absoluteX="26dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/angry_btn"
 
         android:layout_width="270dp"
         android:layout_height="48dp"
-        android:background="@drawable/buttonshape"
+        android:autoSizeMaxTextSize="28sp"
 
-        android:text="Я заказчик"
+        android:autoSizeMinTextSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="0"
+        android:text="Я исполнитель"
+        android:textAllCaps="false"
         android:textColor="#FFF1ED"
-        android:textSize="24sp"
+        android:textFontWeight="400"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.824" />
+
+    <Button
+        android:id="@+id/angry_btn2"
+
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="28sp"
+
+        android:autoSizeMinTextSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="0"
+        android:text="Я заказчик"
+        android:textAllCaps="false"
+        android:textColor="#FFF1ED"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angry_btn"
+        app:layout_constraintVertical_bias="0.184" />
 </androidx.constraintlayout.widget.ConstraintLayout>
