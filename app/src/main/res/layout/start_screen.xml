@@ -46,7 +46,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/angry_btn"
+        android:id="@+id/start_contractor_btn"
 
         android:layout_width="270dp"
         android:layout_height="48dp"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.824" />
 
     <Button
-        android:id="@+id/angry_btn2"
+        android:id="@+id/start_client_btn"
 
         android:layout_width="270dp"
         android:layout_height="48dp"
@@ -89,6 +89,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/angry_btn"
+        app:layout_constraintTop_toBottomOf="@+id/start_contractor_btn"
         app:layout_constraintVertical_bias="0.184" />
 </androidx.constraintlayout.widget.ConstraintLayout>
