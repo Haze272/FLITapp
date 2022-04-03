@@ -1,12 +1,8 @@
 package com.example.flitapp;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.View;
 
 public class RegEmailInput extends AppCompatActivity {
 

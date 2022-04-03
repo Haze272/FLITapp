@@ -7,4 +7,15 @@
     <string name="profile">Профиль</string>
     <string name="whatsurname">Как вас зовут?</string>
     <string name="whatsuremail">Укажите почту</string>
+    <string name="header_complete_reg">Последний шаг!</string>
+    <string name="sub_header_last_step">Укажите номер телефона для подтверждения учётной записи!</string>
+    <string name="reg_btn_complete">Завершить</string>
+    <string name="reg_send_code_again">Отправить код снова</string>
+    <string name="reg_send_code">Отправить код</string>
+    <string name="reg_btn_create_account">Создать аккаунт</string>
+    <string name="reg_privacy">Нажимая на кнопку, вы принимаете условия сервиса</string>
+    <string name="reg_input_example_name">Степан</string>
+    <string name="reg_input_example_email">example@gmail.com</string>
+    <string name="reg_btn_save">Сохранить</string>
+    <string name="reg_btn_add_later">Добавить позже</string>
 </resources>

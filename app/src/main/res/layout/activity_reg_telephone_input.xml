@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461"
+        app:srcCompat="@drawable/react_svgrepo_com_1" />
+
+    <Button
+        android:id="@+id/reg_complete_btn"
+
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="28sp"
+
+        android:autoSizeMinTextSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="0"
+        android:text="@string/reg_btn_complete"
+        android:textAllCaps="false"
+        android:textColor="#FFF1ED"
+        android:textFontWeight="400"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/header_last_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/header_complete_reg"
+        android:textColor="#090909"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+    <TextView
+        android:id="@+id/sub_header_last_step"
+        android:layout_width="311dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sub_header_last_step"
+        android:textColor="@color/sub_header"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/header_last_step"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/header_last_step"
+        app:layout_constraintTop_toBottomOf="@+id/header_last_step" />
+
+    <EditText
+        android:id="@+id/editTextPersonTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/main_edit_text"
+        android:ems="10"
+        android:hint="+7 (123) 456-78-90"
+        android:inputType="phone"
+        android:paddingLeft="12dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sub_header_last_step"
+        app:layout_constraintTop_toBottomOf="@+id/sub_header_last_step" />
+
+    <Button
+        android:id="@+id/reg_send_code"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:fontFamily="@font/inter"
+        android:padding="0dp"
+        android:paddingVertical="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/reg_send_code"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#767676"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextPersonTelephone"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonTelephone" />
+
+    <EditText
+        android:id="@+id/editTextPersonCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/main_edit_text"
+        android:ems="10"
+        android:hint="123-456"
+        android:inputType="textPersonName"
+        android:paddingLeft="12dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/reg_send_code"
+        app:layout_constraintTop_toBottomOf="@+id/reg_send_code" />
+
+    <Button
+        android:id="@+id/reg_send_code_again"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:fontFamily="@font/inter"
+        android:padding="0dp"
+        android:paddingVertical="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/reg_send_code_again"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#767676"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextPersonCode"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonCode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

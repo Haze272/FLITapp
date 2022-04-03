@@ -31,7 +31,7 @@
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/inter"
         android:letterSpacing="0"
-        android:text="Создать аккаунт"
+        android:text="@string/reg_btn_create_account"
         android:textAllCaps="false"
         android:textColor="#FFF1ED"
         android:textFontWeight="400"
@@ -48,7 +48,7 @@
         android:layout_width="301dp"
         android:layout_height="39dp"
         android:layout_marginTop="4dp"
-        android:text="Нажимая на кнопку, вы принимаете условия сервиса"
+        android:text="@string/reg_privacy"
         android:textAlignment="center"
         android:textColor="#646464"
         android:textSize="14sp"
@@ -65,7 +65,8 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/header_name"
@@ -87,7 +88,7 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/main_edit_text"
         android:ems="10"
-        android:hint="Степан"
+        android:hint="@string/reg_input_example_name"
         android:inputType="textPersonName"
         android:paddingLeft="12dp"
         android:textSize="20sp"

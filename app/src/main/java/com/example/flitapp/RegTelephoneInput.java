@@ -2,15 +2,16 @@ package com.example.flitapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 
-public class RegNameInput extends AppCompatActivity {
+public class RegTelephoneInput extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reg_name);
+        setContentView(R.layout.activity_reg_telephone_input);
+
         //getSupportActionBar().hide();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar4);

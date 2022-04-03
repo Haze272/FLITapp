@@ -11,4 +11,5 @@
     <color name="headerTeal">#FF053F47</color>
     <color name="bottomBarGray">#F4F4F4</color>
     <color name="gray_btn_button">#E6E6E6</color>
+    <color name="sub_header">#444444</color>
 </resources>
