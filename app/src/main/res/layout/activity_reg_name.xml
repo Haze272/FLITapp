@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/app_bg">
 
     <ImageView
         android:id="@+id/imageView"
@@ -33,7 +33,7 @@
         android:letterSpacing="0"
         android:text="@string/reg_btn_create_account"
         android:textAllCaps="false"
-        android:textColor="#FFF1ED"
+        android:textColor="@color/btn_text"
         android:textFontWeight="400"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/reg_privacy"
         android:textAlignment="center"
-        android:textColor="#646464"
+        android:textColor="@color/text_small_black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:text="@string/whatsurname"
-        android:textColor="#090909"
+        android:textColor="@color/header_black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
