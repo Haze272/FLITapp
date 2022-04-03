@@ -5,4 +5,6 @@
     <string name="response">Отклики</string>
     <string name="message">Сообщения</string>
     <string name="profile">Профиль</string>
+    <string name="whatsurname">Как вас зовут?</string>
+    <string name="whatsuremail">Укажите почту</string>
 </resources>

@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/react_svgrepo_com_1" />
 
     <Button
-        android:id="@+id/reg_create_account_btn"
+        android:id="@+id/reg_save_email_btn"
 
         android:layout_width="270dp"
         android:layout_height="48dp"
@@ -31,7 +31,7 @@
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/inter"
         android:letterSpacing="0"
-        android:text="Создать аккаунт"
+        android:text="Сохранить"
         android:textAllCaps="false"
         android:textColor="#FFF1ED"
         android:textFontWeight="400"
@@ -41,21 +41,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
-
-    <TextView
-        android:id="@+id/LoadScreenSlogan"
-        android:layout_width="301dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="4dp"
-        android:text="Нажимая на кнопку, вы принимаете условия сервиса"
-        android:textAlignment="center"
-        android:textColor="#646464"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_create_account_btn"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.859" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
@@ -65,33 +51,50 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/header_name"
+        android:id="@+id/header_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
-        android:text="@string/whatsurname"
+        android:text="@string/whatsuremail"
         android:textColor="#090909"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextTextPersonEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/main_edit_text"
         android:ems="10"
-        android:hint="Степан"
+        android:hint="example@gmail.com"
         android:inputType="textPersonName"
         android:paddingLeft="12dp"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_name" />
+        app:layout_constraintTop_toBottomOf="@+id/header_email" />
+
+    <Button
+        android:id="@+id/reg_add_later_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter"
+        android:text="Добавить позже"
+        android:textAllCaps="false"
+        android:textColor="#767676"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_save_email_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
