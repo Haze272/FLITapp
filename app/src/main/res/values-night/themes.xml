@@ -3,7 +3,7 @@
     <style name="Theme.FLITapp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/tealMain</item>
-        <item name="colorPrimaryVariant">#FFFFFF</item>
+        <item name="colorPrimaryVariant">#BFBFBF</item>
         <item name="colorOnPrimary">#272727</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

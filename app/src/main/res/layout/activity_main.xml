@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -32,10 +31,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="349dp"
-        android:layout_height="263dp"
-        android:background="#F9F9F9"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="118dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#EFEFEF"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_header_tasks">
 
 
         <TextView
@@ -63,12 +66,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexboxLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="47dp">
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:dividerDrawable="@drawable/divider"
+            app:flexWrap="wrap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.29"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_header_1"
+            app:layout_constraintVertical_bias="0.0"
+            app:showDivider="middle|beginning">
 
             <TextView
                 android:id="@+id/textView4"
@@ -87,7 +99,6 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:background="@color/colortag_css"
                 android:fontFamily="@font/inter_bold"
@@ -95,13 +106,13 @@
                 android:text="CSS"
                 android:textColor="@color/btn_text"
                 android:textFontWeight="700"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="64dp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:background="@color/colortag_js"
                 android:fontFamily="@font/inter_bold"
@@ -109,13 +120,13 @@
                 android:text="JavaScript"
                 android:textColor="@color/btn_text"
                 android:textFontWeight="700"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="114dp" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:background="@color/colortag_php"
                 android:fontFamily="@font/inter_bold"
@@ -123,37 +134,75 @@
                 android:text="PHP"
                 android:textColor="@color/btn_text"
                 android:textFontWeight="700"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="210dp" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:background="@color/colortag_php"
+                android:background="@color/colortag_laravel"
                 android:fontFamily="@font/inter_bold"
                 android:paddingHorizontal="10dp"
-                android:text="PHP"
+                android:text="Laravel"
                 android:textColor="@color/btn_text"
                 android:textFontWeight="700"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="262dp"
+                tools:layout_editor_absoluteY="37dp" />
 
-        </LinearLayout>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/search_task_text"
+            android:textColor="#000000"
+            android:textFontWeight="500"
+            app:layout_constraintEnd_toEndOf="@+id/task_price_1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/flexboxLayout"
+            app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="158dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/buttonshape_small"
+            android:fontFamily="@font/inter"
+            android:text="Откликнуться"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView13"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/search_header_tasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/inter"
         android:text="@string/search_header_tasks"
         android:textColor="@color/header_black"
         android:textFontWeight="700"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

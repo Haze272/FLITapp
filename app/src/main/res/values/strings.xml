@@ -19,4 +19,5 @@
     <string name="reg_btn_save">Сохранить</string>
     <string name="reg_btn_add_later">Добавить позже</string>
     <string name="search_header_tasks">Актуальные задания</string>
+    <string name="search_task_text">Необходимо создать сайт под ключ для компании по оказании бухгалтерских услуг. На сайте будет должны присутствовать обратные формы, карта, преимущества компании и личный кабинет, также необходимо сделать калькулятор стоимости.</string>
 </resources>
