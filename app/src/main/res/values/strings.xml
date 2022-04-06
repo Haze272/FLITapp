@@ -18,4 +18,5 @@
     <string name="reg_input_example_email">example@gmail.com</string>
     <string name="reg_btn_save">Сохранить</string>
     <string name="reg_btn_add_later">Добавить позже</string>
+    <string name="search_header_tasks">Актуальные задания</string>
 </resources>
