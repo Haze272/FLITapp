@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/ic_stepanio"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bottomBarGray"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter"
+        android:text="Степан Беркунов"
+        android:textColor="#000000"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_tasks_done"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/profile_done"
+        app:layout_constraintEnd_toStartOf="@+id/profile_tasks_created"
+        app:layout_constraintTop_toTopOf="@+id/profile_tasks_created">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="12"
+            android:textColor="#000000"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.246" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Заданий сделано"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_tasks_created"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/profile_done"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="2"
+            android:textColor="#000000"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.246" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Заданий создано"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_rating"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/profile_done"
+        app:layout_constraintStart_toEndOf="@+id/profile_tasks_created"
+        app:layout_constraintTop_toTopOf="@+id/profile_tasks_created">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="4.8"
+            android:textColor="#000000"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.246" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Средняя оценка"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/profile_tags_done"
+        android:layout_width="341dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:dividerDrawable="@drawable/divider"
+        app:flexWrap="wrap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_tasks_created"
+        app:showDivider="middle|beginning">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_html"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="HTML"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"></TextView>
+
+            <TextView
+                android:id="@+id/textView4_n"
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_weight="1"
+                android:background="@drawable/test_profile_tag_counter"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/inter_bold"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="6"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colortag_css"
+            android:fontFamily="@font/inter_bold"
+            android:paddingHorizontal="10dp"
+            android:text="CSS"
+            android:textColor="@color/btn_text"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="64dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colortag_js"
+            android:fontFamily="@font/inter_bold"
+            android:paddingHorizontal="10dp"
+            android:text="JavaScript"
+            android:textColor="@color/btn_text"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="114dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colortag_php"
+            android:fontFamily="@font/inter_bold"
+            android:paddingHorizontal="10dp"
+            android:text="PHP"
+            android:textColor="@color/btn_text"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="210dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colortag_laravel"
+            android:fontFamily="@font/inter_bold"
+            android:paddingHorizontal="10dp"
+            android:text="Laravel"
+            android:textColor="@color/btn_text"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="262dp"
+            tools:layout_editor_absoluteY="37dp" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/profile_header_tasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/inter"
+        android:text="Последние задания:"
+        android:textColor="@color/header_black"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/profile_tags_done"
+        app:layout_constraintTop_toBottomOf="@+id/profile_tags_done" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#EFEFEF"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_header_tasks">
+
+
+        <TextView
+            android:id="@+id/task_header_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter"
+            android:text="Изменить цены на сайте"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task_price_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter"
+            android:text="150 $"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexboxLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:dividerDrawable="@drawable/divider"
+            app:flexWrap="wrap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/task_header_1"
+            app:layout_constraintTop_toBottomOf="@+id/task_header_1"
+            app:layout_constraintVertical_bias="0.0"
+            app:showDivider="middle|beginning">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_modx"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="ModX"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/wtf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_php"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="PHP"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="64dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/profile_task_test"
+            android:textColor="#000000"
+            android:textFontWeight="500"
+            app:layout_constraintEnd_toEndOf="@+id/task_price_1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/flexboxLayout"
+            app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

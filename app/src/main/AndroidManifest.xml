@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FLITapp">
         <activity
+            android:name=".ProfileScreen"
+            android:exported="true" />
+        <activity
             android:name=".RegTelephoneInput"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".StartScreen"
             android:exported="true">
@@ -24,7 +27,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".RegNameInput"
             android:exported="true"

@@ -22,4 +22,5 @@
     <color name="colortag_js">#FF7A00</color>
     <color name="colortag_php">#2C539F</color>
     <color name="colortag_laravel">#EB4432</color>
+    <color name="colortag_modx">#16A02C</color>
 </resources>
