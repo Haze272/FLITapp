@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FLITapp">
         <activity
+            android:name=".MessagesScreen"
+            android:exported="true" />
+        <activity
             android:name=".ProfileScreen"
             android:exported="true" />
         <activity
