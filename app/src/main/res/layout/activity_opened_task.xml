@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpenedTask">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#EFEFEF"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4">
+
+        <TextView
+            android:id="@+id/opened_task_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter"
+            android:text="Сайт под ключ"
+            android:textColor="@color/header_black"
+            android:textFontWeight="700"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/opened_task_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/inter"
+            android:text="35 000 $ на руки"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/opened_task_header" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexboxLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:dividerDrawable="@drawable/divider"
+            app:flexWrap="wrap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/opened_task_price"
+            app:showDivider="middle|beginning">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_html"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="HTML"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_css"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="CSS"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="64dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_js"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="JavaScript"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="114dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_php"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="PHP"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="210dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_laravel"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="Laravel"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="262dp"
+                tools:layout_editor_absoluteY="37dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/search_task_text"
+        android:textColor="#000000"
+        android:textFontWeight="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/reg_save_email_btn"
+
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="28sp"
+
+        android:autoSizeMinTextSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/inter"
+        android:letterSpacing="0"
+        android:text="Откликнуться"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_text"
+        android:textFontWeight="400"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,6 +36,10 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
+            android:name=".OpenedTask"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
             android:name=".RegEmailInput"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
