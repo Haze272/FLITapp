@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Responses"
+    android:background="@color/app_bg">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bottomBarGray"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461"
+        app:srcCompat="@drawable/react_svgrepo_com_1" />
+
+    <TextView
+        android:id="@+id/search_header_tasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/inter"
+        android:text="Отклики"
+        android:textColor="@color/header_black"
+        android:textFontWeight="700"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:background="#EFEFEF"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_header_tasks">
+
+
+        <TextView
+            android:id="@+id/task_header_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter"
+            android:text="Изменить цены на сайте"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task_price_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter"
+            android:text="150 $"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexboxLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:dividerDrawable="@drawable/divider"
+            app:flexWrap="wrap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/task_header_1"
+            app:layout_constraintTop_toBottomOf="@+id/task_header_1"
+            app:layout_constraintVertical_bias="0.0"
+            app:showDivider="middle|beginning">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_modx"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="ModX"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/wtf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_php"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="PHP"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="64dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/profile_task_test"
+            android:textColor="#000000"
+            android:textFontWeight="500"
+            app:layout_constraintEnd_toEndOf="@+id/task_price_1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/flexboxLayout"
+            app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#EFEFEF"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+
+        <TextView
+            android:id="@+id/task_header_2"
+            android:layout_width="263dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter"
+            android:text="Доработка приложение для конференций iOS"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task_price_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter"
+            android:text="9999 ₽"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexboxLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:dividerDrawable="@drawable/divider"
+            app:flexWrap="wrap"
+            app:layout_constraintStart_toStartOf="@+id/task_header_2"
+            app:layout_constraintTop_toBottomOf="@+id/task_header_2"
+            app:showDivider="middle|beginning">
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_swift"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="Swift"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/gradiento"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="iOS"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/textView422"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortag_objectivec"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="10dp"
+                android:text="Objective-C"
+                android:textColor="@color/btn_text"
+                android:textFontWeight="700"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:id="@+id/textView132"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/search_task_text3"
+            android:textColor="#000000"
+            android:textFontWeight="500"
+            app:layout_constraintEnd_toEndOf="@+id/task_price_2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/flexboxLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/flexboxLayout2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="158dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/buttonshape_small"
+            android:fontFamily="@font/inter"
+            android:letterSpacing="0"
+            android:text="Откликнуться"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView132"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/textView132"
+            app:layout_constraintTop_toBottomOf="@+id/textView132" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

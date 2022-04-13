@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FLITapp">
         <activity
+            android:name=".Responses"
+            android:exported="true" />
+        <activity
+            android:name=".Favourites"
+            android:exported="true" />
+        <activity
             android:name=".MessagesScreen"
             android:exported="true" />
         <activity
@@ -38,7 +44,7 @@
         <activity
             android:name=".OpenedTask"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".RegEmailInput"
             android:exported="true"
