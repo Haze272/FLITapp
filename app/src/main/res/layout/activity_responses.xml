@@ -256,22 +256,5 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/flexboxLayout2"
             app:layout_constraintTop_toBottomOf="@+id/flexboxLayout2" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="158dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/buttonshape_small"
-            android:fontFamily="@font/inter"
-            android:letterSpacing="0"
-            android:text="Откликнуться"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView132"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="@+id/textView132"
-            app:layout_constraintTop_toBottomOf="@+id/textView132" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

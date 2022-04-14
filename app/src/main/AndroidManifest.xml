@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FLITapp">
         <activity
+            android:name=".Chat"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
             android:name=".Responses"
             android:exported="true" />
         <activity
