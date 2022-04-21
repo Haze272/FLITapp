@@ -23,4 +23,6 @@
     <string name="profile_task_test">Изменить цены на всех товарах сайта, товаров примерно 100</string>
     <string name="search_task_text2">Мужики! Нужен толковый парень чтобы слепить нам сайт для нашей автомастерской! Оплатой не обидим! Все подробности после отлика!</string>
     <string name="search_task_text3">Есть приложение для конференций на iOS (Swift/Obj-C)  Функции приложения: - список конференций - авторизация (вход) в свою конференцию - список участников конференции - чат с выбранным участником (socket)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
