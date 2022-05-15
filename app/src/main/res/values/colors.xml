@@ -19,23 +19,88 @@
     <color name="text_small_black">#646464</color>
 
     <!-- Languages -->
-    <color name="colortag_html">#FFC700</color>
-    <color name="colortag_css">#0057FF</color>
-    <color name="colortag_js">#FF7A00</color>
-    <color name="colortag_php">#2C539F</color>
-    <color name="colortag_swift">#F88B4E</color>
-    <color name="colortag_objectivec">#197BE4</color>
+    <color name="html">#e34c26</color>
+    <color name="css">#0057FF</color>
+    <color name="javascript">#f1e05a</color>
+    <color name="assembly">#6E4C13</color>
+    <color name="c">#555555</color>
+    <color name="csharp">#178600</color>
+    <color name="cpp">#f34b7d</color>
+    <color name="clojure">#db5855</color>
+    <color name="dart">#00B4AB</color>
+    <color name="fortran">#4d41b1</color>
+    <color name="go">#00ADD8</color>
+    <color name="groovy">#e69f56</color>
+    <color name="haskell">#5e5086</color>
+    <color name="java">#b07219</color>
+    <color name="julia">#a270ba</color>
+    <color name="jupyter_notebook">#DA5B0B</color>
+    <color name="kotlin">#F18E33</color>
+    <color name="lua">#000080</color>
+    <color name="matlab">#e16737</color>
+    <color name="objectivec">#197BE4</color>
+    <color name="php">#4F5D95</color>
+    <color name="pascal">#C9D65E</color>
+    <color name="perl">#0298c3</color>
+    <color name="raku">#0000fb</color>
+    <color name="python">#3572A5</color>
+    <color name="r">#198CE7</color>
+    <color name="ruby">#701516</color>
+    <color name="rust">#dea584</color>
+    <color name="scala">#c22d40</color>
+    <color name="shell">#89e051</color>
+    <color name="smalltalk">#596706</color>
+    <color name="solidity">#AA6746</color>
+    <color name="swift">#F88B4E</color>
+    <color name="typescript">#2b7489</color>
+    <color name="vba">#867db1</color>
+    <color name="webassembly">#04133b</color>
+    <color name="onec">#814CCC</color>
+    <color name="ada">#02f88c</color>
+    <color name="asp_dotnet">#9400ff</color>
+    <color name="brainfuck">#2F2530</color>
+    <color name="csv">#237346</color>
+    <color name="glsl">#5686a5</color>
 
     <!-- Frameworks -->
-    <color name="colortag_laravel">#EB4432</color>
+    <color name="laravel">#EB4432</color>
+    <color name="react">#5ED3F3</color>
+    <color name="angular">#DE0031</color>
+    <color name="angularjs">#CD0431</color>
+    <color name="nodejs">#68A063</color>
+    <color name="vue">#2c3e50</color>
+    <color name="spring">#54B236</color>
+    <color name="django">#092e20</color>
+    <color name="ruby_on_rails">#CC0000</color>
+    <color name="gatsby">#663399</color>
+    <color name="ember">#E24B31</color>
 
-    <color name="colortag_react">#5ED3F3</color>
-    <color name="colortag_angular">#DE0031</color>
-    <color name="colortag_nodejs">#68A063</color>
+    <!-- Database -->
+    <color name="mysql">#00758F</color>
+    <color name="postgresql">#336791</color>
+    <color name="microsoft_sql_server">#858585</color>
+    <color name="oracle_database">#EF282B</color>
+    <color name="sql">#171717</color>
+    <color name="mongodb">#589636</color>
+    <color name="redis">#93161B</color>
 
     <!-- CMS -->
-    <color name="colortag_modx">#16A02C</color>
+    <color name="modx">#16A02C</color>
+    <color name="wordpress">#21759B</color>
+    <color name="bitrix">#C00C2E</color>
+    <color name="opencart">#2EBFEB</color>
+    <color name="tilda">#1A1A1A</color>
+    <color name="drupal">#0073BA</color>
 
-    <!-- Platforms -->
+    <!-- Techologies -->
+    <color name="dockerfile">#384d54</color>
+    <color name="git">#F44D27</color>
+    <color name="gradle">#02303a</color>
+    <color name="http">#005C9C</color>
+    <color name="svg">#ff9900</color>]
+
+    <!-- Architectures -->
+    <color name="flux">#88ccff</color>
+
 
 </resources>

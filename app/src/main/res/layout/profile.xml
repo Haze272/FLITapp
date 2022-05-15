@@ -182,7 +182,7 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp"
-            android:background="@color/colortag_html">
+            android:background="@color/html">
 
             <TextView
                 android:id="@+id/example_tag_1_text"
@@ -226,7 +226,7 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp"
-            android:background="@color/colortag_angular">
+            android:background="@color/angular">
 
             <TextView
                 android:id="@+id/example_tag_2_text"
@@ -270,7 +270,7 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp"
-            android:background="@color/colortag_angular">
+            android:background="@color/angular">
 
             <TextView
                 android:id="@+id/example_tag_3_text"
@@ -381,7 +381,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colortag_modx"
+                android:background="@color/modx"
                 android:fontFamily="@font/inter_bold"
                 android:paddingHorizontal="10dp"
                 android:text="ModX"
@@ -396,7 +396,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colortag_php"
+                android:background="@color/php"
                 android:fontFamily="@font/inter_bold"
                 android:paddingHorizontal="10dp"
                 android:text="PHP"
