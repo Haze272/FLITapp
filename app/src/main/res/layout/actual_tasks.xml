@@ -38,6 +38,7 @@
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:weightSum="10"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_header_tasks"
@@ -54,7 +55,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/actual_tasks_recycler_view"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
