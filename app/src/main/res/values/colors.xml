@@ -18,16 +18,24 @@
     <color name="btn_without_bg_text">#767676</color>
     <color name="text_small_black">#646464</color>
 
+    <!-- Languages -->
     <color name="colortag_html">#FFC700</color>
     <color name="colortag_css">#0057FF</color>
     <color name="colortag_js">#FF7A00</color>
     <color name="colortag_php">#2C539F</color>
+    <color name="colortag_swift">#F88B4E</color>
+    <color name="colortag_objectivec">#197BE4</color>
+
+    <!-- Frameworks -->
     <color name="colortag_laravel">#EB4432</color>
-    <color name="colortag_modx">#16A02C</color>
+
     <color name="colortag_react">#5ED3F3</color>
     <color name="colortag_angular">#DE0031</color>
     <color name="colortag_nodejs">#68A063</color>
-    <color name="colortag_swift">#F88B4E</color>
-    <color name="colortag_objectivec">#197BE4</color>
+
+    <!-- CMS -->
+    <color name="colortag_modx">#16A02C</color>
+
+    <!-- Platforms -->
 
 </resources>

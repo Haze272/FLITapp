@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessagesScreen"
     android:background="@color/app_bg">
 
     <ImageView
@@ -20,33 +19,21 @@
         app:layout_constraintVertical_bias="0.461"
         app:srcCompat="@drawable/react_svgrepo_com_1" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bottomBarGray"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/messages_messages_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:alignContent="flex_start"
         app:alignItems="flex_start"
         app:dividerDrawable="@drawable/divider"
-        app:flexWrap="wrap"
         app:flexDirection="row"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:showDivider="middle|beginning" 
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        app:showDivider="middle|beginning">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
