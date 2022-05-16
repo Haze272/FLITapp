@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TagsStyling" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#000000</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:textColor">@color/btn_text</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

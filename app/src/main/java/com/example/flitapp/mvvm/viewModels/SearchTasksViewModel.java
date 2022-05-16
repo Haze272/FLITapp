@@ -2,17 +2,19 @@ package com.example.flitapp.mvvm.viewModels;
 
 import android.view.View;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.flitapp.mvvm.models.Task;
+import com.example.flitapp.mvvm.models.repositories.TagRepository;
 import com.example.flitapp.mvvm.models.repositories.TaskRepository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SearchTasksViewModel extends ViewModel {
-    private TaskRepository repository = TaskRepository.getInstance();
+    private TaskRepository taskRepository = TaskRepository.getInstance();
+    private TagRepository tagRepository = TagRepository.getInstance();
 
     private MutableLiveData<ArrayList<Task>> currentTask;
 
@@ -20,8 +22,12 @@ public class SearchTasksViewModel extends ViewModel {
         if (currentTask == null) {
             currentTask = new MutableLiveData<ArrayList<Task>>();
         }
-        currentTask.setValue(repository.getLatestTasks());
+        currentTask.setValue(taskRepository.getLatestTasks());
 
         return currentTask;
+    }
+
+    public HashMap<String, String> getTagColors() {
+        return tagRepository.getTagsColors();
     }
 }

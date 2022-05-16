@@ -82,7 +82,7 @@ public class TaskRepository {
                 orderCounter,
                 "Настройки подмены WEBRTC и DNS через titanium web proxy или аналог C#",
                 "Договорная",
-                new String[]{"charp"},
+                new String[]{"csharp"},
                 "Нужен способ создания прокси titanium web proxy или аналог для C# с " +
                         "возможностью подмены или блокировки WEBRTC и или DNS от установленного прокси для C#\n" +
                         "Что бы работало для установки прокси в selenium или puppeteer",

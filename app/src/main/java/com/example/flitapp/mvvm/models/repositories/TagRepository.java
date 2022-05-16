@@ -171,4 +171,8 @@ public class TagRepository {
     public ArrayList<String> getTagsList() {
         return tagsList;
     }
+
+    public HashMap<String, String> getTagsColors() {
+        return tagsColors;
+    }
 }

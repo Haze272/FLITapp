@@ -36,7 +36,7 @@ public class SearchTasksFragment extends Fragment {
         final Observer<ArrayList<Task>> nameObserver = new Observer<ArrayList<Task>>() {
             @Override
             public void onChanged(@Nullable final ArrayList<Task> order) {
-                adapter = new SearchTasksAdapter(order,requireContext());
+                adapter = new SearchTasksAdapter(order,requireContext(), viewModel);
                 recyclerView.setAdapter(adapter);
             }
         };

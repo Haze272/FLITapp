@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="#EFEFEF"
+        android:paddingLeft="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
@@ -25,16 +26,17 @@
 
         <TextView
             android:id="@+id/task_header"
-            android:layout_width="287dp"
+            android:layout_width="0dp"
             android:layout_height="19dp"
             android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/inter"
             android:text="Сайт под ключ"
             android:textColor="@color/black"
             android:textFontWeight="600"
             app:layout_constraintEnd_toStartOf="@+id/task_price"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tags_list"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -55,18 +57,16 @@
             android:layout_height="wrap_content"
             app:alignContent="flex_start"
             app:alignItems="flex_start"
+            android:paddingTop="6dp"
+            android:layout_marginLeft="10dp"
             app:dividerDrawable="@drawable/divider"
             app:flexWrap="wrap"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.29"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/task_header"
-            app:layout_constraintVertical_bias="0.0"
-            app:showDivider="middle|beginning">
-
+            app:showDivider="end|middle">
+            <!--
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/firstTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -78,95 +78,95 @@
                 android:textFontWeight="700"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/css"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="CSS"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="64dp" />
+             <TextView
+                 android:id="@+id/secondTag"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:background="@color/css"
+                 android:fontFamily="@font/inter_bold"
+                 android:paddingHorizontal="10dp"
+                 android:text="CSS"
+                 android:textColor="@color/btn_text"
+                 android:textFontWeight="700"
+                 android:textSize="16sp"
+                 tools:layout_editor_absoluteX="64dp" />
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/javascript"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="JavaScript"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="114dp" />
+             <TextView
+                 android:id="@+id/thirdTag"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:background="@color/javascript"
+                 android:fontFamily="@font/inter_bold"
+                 android:paddingHorizontal="10dp"
+                 android:text="JavaScript"
+                 android:textColor="@color/btn_text"
+                 android:textFontWeight="700"
+                 android:textSize="16sp"
+                 tools:layout_editor_absoluteX="114dp" />
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/php"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="PHP"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="210dp" />
+             <TextView
+                 android:id="@+id/fourthTag"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:background="@color/php"
+                 android:fontFamily="@font/inter_bold"
+                 android:paddingHorizontal="10dp"
+                 android:text="PHP"
+                 android:textColor="@color/btn_text"
+                 android:textFontWeight="700"
+                 android:textSize="16sp"
+                 tools:layout_editor_absoluteX="210dp" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/laravel"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="Laravel"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="262dp"
-                tools:layout_editor_absoluteY="37dp" />
-
+             <TextView
+                 android:id="@+id/fifthTag"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:background="@color/laravel"
+                 android:fontFamily="@font/inter_bold"
+                 android:paddingHorizontal="10dp"
+                 android:text="Laravel"
+                 android:textColor="@color/btn_text"
+                 android:textFontWeight="700"
+                 android:textSize="16sp"
+                 tools:layout_editor_absoluteX="262dp"
+                 tools:layout_editor_absoluteY="37dp" />
+                                       -->
         </com.google.android.flexbox.FlexboxLayout>
 
         <TextView
-        android:id="@+id/description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/search_task_text"
-        android:textColor="#000000"
-        android:textFontWeight="500"
-        app:layout_constraintEnd_toEndOf="@+id/task_price"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tags_list"
-        app:layout_constraintTop_toBottomOf="@+id/tags_list" />
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="@string/search_task_text"
+            android:textColor="#000000"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textFontWeight="500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tags_list" />
 
         <Button
-                android:id="@+id/button"
-                android:layout_width="158dp"
-                android:layout_height="39dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/buttonshape_small"
-                android:fontFamily="@font/inter"
-                android:letterSpacing="0"
-                android:text="Откликнуться"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@+id/description"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="@+id/description"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
+            android:id="@+id/button"
+            android:layout_width="158dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/buttonshape_small"
+            android:fontFamily="@font/inter"
+            android:letterSpacing="0"
+            android:text="Откликнуться"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/description"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/description"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
