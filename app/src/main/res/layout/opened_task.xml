@@ -63,7 +63,7 @@
             app:flexWrap="wrap"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/opened_task_price"
-            app:showDivider="middle|beginning">
+            app:showDivider="end|middle">
 
             <TextView
                 android:id="@+id/firstTag"

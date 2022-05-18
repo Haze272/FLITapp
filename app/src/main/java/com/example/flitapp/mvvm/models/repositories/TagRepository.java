@@ -25,6 +25,7 @@ public class TagRepository {
         tagsColors.put("css", "#0057FF");
         tagsColors.put("javascript", "#f1e05a");
         tagsColors.put("assembly", "#6E4C13");
+        tagsColors.put("delphi", "#EE5C67");
         tagsColors.put("c", "#555555");
         tagsColors.put("csharp", "#178600");
         tagsColors.put("cpp", "#f34b7d");
@@ -98,6 +99,7 @@ public class TagRepository {
         tagsList.add("css");
         tagsList.add("javascript");
         tagsList.add("assembly");
+        tagsList.add("delphi");
         tagsList.add("c");
         tagsList.add("csharp");
         tagsList.add("cpp");

@@ -16,7 +16,7 @@ import com.example.flitapp.R;
 import com.example.flitapp.databinding.ActualTasksBinding;
 import com.example.flitapp.mvvm.models.Task;
 import com.example.flitapp.mvvm.viewModels.SearchTasksViewModel;
-import com.example.flitapp.mvvm.views.adapters.SearchTasksAdapter;
+import com.example.flitapp.mvvm.views.adapters.DisplayTasksAdapter;
 
 import java.util.ArrayList;
 
@@ -24,7 +24,7 @@ public class SearchTasksFragment extends Fragment {
     private SearchTasksViewModel viewModel;
     private ActualTasksBinding binding;
     private RecyclerView recyclerView;
-    private SearchTasksAdapter adapter;
+    private DisplayTasksAdapter adapter;
 
     @Nullable
     @Override
@@ -36,7 +36,7 @@ public class SearchTasksFragment extends Fragment {
         final Observer<ArrayList<Task>> nameObserver = new Observer<ArrayList<Task>>() {
             @Override
             public void onChanged(@Nullable final ArrayList<Task> order) {
-                adapter = new SearchTasksAdapter(order,requireContext(), viewModel);
+                adapter = new DisplayTasksAdapter(order,requireContext(), viewModel);
                 recyclerView.setAdapter(adapter);
             }
         };
