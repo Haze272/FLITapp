@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.flitapp.R;
@@ -20,13 +19,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class SearchTasksAdapter extends RecyclerView.Adapter<SearchTasksAdapter.SearchTasksViewHolder> {
+public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapter.DisplayTasksViewHolder> {
     private SearchTasksViewModel viewModel;
 
     private ArrayList<Task> taskList;
     Context context;
 
-    public SearchTasksAdapter(ArrayList<Task> data, Context context, SearchTasksViewModel searchTasksViewModel) {
+    public DisplayTasksAdapter(ArrayList<Task> data, Context context, SearchTasksViewModel searchTasksViewModel) {
         this.taskList = data;
         this.context = context;
         this.viewModel = searchTasksViewModel;
@@ -34,10 +33,10 @@ public class SearchTasksAdapter extends RecyclerView.Adapter<SearchTasksAdapter.
 
     @NonNull
     @Override
-    public SearchTasksAdapter.SearchTasksViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DisplayTasksViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.fragment_task, parent, false);
-        return new SearchTasksAdapter.SearchTasksViewHolder(view);
+        return new DisplayTasksViewHolder(view);
     }
 
     public TextView setTagStyle(TextView element, String tag) {
@@ -60,7 +59,7 @@ public class SearchTasksAdapter extends RecyclerView.Adapter<SearchTasksAdapter.
         return element;
     }
 
-    public String normalizeTag(String tag) {
+    public String normalizeTag(@NonNull String tag) {
         String result = "";
 
         switch (tag) {
@@ -169,13 +168,14 @@ public class SearchTasksAdapter extends RecyclerView.Adapter<SearchTasksAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final SearchTasksAdapter.SearchTasksViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final DisplayTasksViewHolder holder, int position) {
         final Task tempTask = taskList.get(position);
 
         holder.header.setText(tempTask.getHeader());
         holder.price.setText(tempTask.getPrice());
         holder.description.setText(tempTask.getDescription());
 
+        holder.tagsList.removeAllViews();
         for(String tag : tempTask.getTags()) {
             TextView txtItem = new TextView(context);
 
@@ -188,11 +188,11 @@ public class SearchTasksAdapter extends RecyclerView.Adapter<SearchTasksAdapter.
         return taskList.size();
     }
 
-    class SearchTasksViewHolder extends RecyclerView.ViewHolder {
+    class DisplayTasksViewHolder extends RecyclerView.ViewHolder {
         TextView header, price, description;
         FlexboxLayout tagsList;
 
-        public SearchTasksViewHolder(@NonNull View itemView) {
+        public DisplayTasksViewHolder(@NonNull View itemView) {
             super(itemView);
             header = itemView.findViewById(R.id.task_header);
             price = itemView.findViewById(R.id.task_price);
@@ -202,7 +202,7 @@ public class SearchTasksAdapter extends RecyclerView.Adapter<SearchTasksAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SearchTasksViewHolder holder, int position, @NonNull List<Object> payloads) {
+    public void onBindViewHolder(@NonNull DisplayTasksViewHolder holder, int position, @NonNull List<Object> payloads) {
         super.onBindViewHolder(holder, position, payloads);
     }
 }
