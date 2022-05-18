@@ -45,7 +45,7 @@ public class SearchTasksFragment extends Fragment {
         viewModel.getActualTasks(v).observe(getViewLifecycleOwner(), nameObserver);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
         recyclerView.setLayoutManager(gridLayoutManager);
-
+        
         return v;
     }
 }

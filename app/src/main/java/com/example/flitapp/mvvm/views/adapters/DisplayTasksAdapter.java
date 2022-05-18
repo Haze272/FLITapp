@@ -8,11 +8,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.flitapp.R;
+import com.example.flitapp.databinding.ActualTasksBinding;
+import com.example.flitapp.databinding.MainActivityBinding;
 import com.example.flitapp.mvvm.models.Task;
 import com.example.flitapp.mvvm.viewModels.SearchTasksViewModel;
+import com.example.flitapp.mvvm.views.OpenedTaskFragment;
 import com.google.android.flexbox.FlexboxLayout;
 
 import java.util.ArrayList;
@@ -189,11 +195,13 @@ public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapte
     }
 
     class DisplayTasksViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout task_tile;
         TextView header, price, description;
         FlexboxLayout tagsList;
 
         public DisplayTasksViewHolder(@NonNull View itemView) {
             super(itemView);
+            task_tile = itemView.findViewById(R.id.task_tile);
             header = itemView.findViewById(R.id.task_header);
             price = itemView.findViewById(R.id.task_price);
             description = itemView.findViewById(R.id.description);
@@ -204,5 +212,12 @@ public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapte
     @Override
     public void onBindViewHolder(@NonNull DisplayTasksViewHolder holder, int position, @NonNull List<Object> payloads) {
         super.onBindViewHolder(holder, position, payloads);
+
+        holder.task_tile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // todo  Тут надо открыть задание
+            }
+        });
     }
 }
