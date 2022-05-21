@@ -64,7 +64,7 @@
                 app:layout_constraintTop_toTopOf="@+id/profile_image" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/openedTaskDescription"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter"

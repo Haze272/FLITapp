@@ -1,21 +1,24 @@
 package com.example.flitapp.mvvm.views.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.flitapp.MainActivity;
 import com.example.flitapp.R;
-import com.example.flitapp.databinding.ActualTasksBinding;
-import com.example.flitapp.databinding.MainActivityBinding;
 import com.example.flitapp.mvvm.models.Task;
 import com.example.flitapp.mvvm.viewModels.SearchTasksViewModel;
 import com.example.flitapp.mvvm.views.OpenedTaskFragment;
@@ -187,6 +190,8 @@ public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapte
 
             holder.tagsList.addView(setTagStyle(txtItem, tag));
         }
+
+        holder.taskId = tempTask.getId();
     }
 
     @Override
@@ -194,10 +199,11 @@ public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapte
         return taskList.size();
     }
 
-    class DisplayTasksViewHolder extends RecyclerView.ViewHolder {
+    public static class DisplayTasksViewHolder extends RecyclerView.ViewHolder{
         ConstraintLayout task_tile;
         TextView header, price, description;
         FlexboxLayout tagsList;
+        int taskId;
 
         public DisplayTasksViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -210,13 +216,22 @@ public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DisplayTasksViewHolder holder, int position, @NonNull List<Object> payloads) {
+    public void onBindViewHolder(
+            @NonNull DisplayTasksViewHolder holder,
+            int position,
+            @NonNull List<Object> payloads) {
         super.onBindViewHolder(holder, position, payloads);
 
-        holder.task_tile.setOnClickListener(new View.OnClickListener() {
+        holder.task_tile.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                // todo  Тут надо открыть задание
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                Fragment myFragment = new OpenedTaskFragment();
+                Bundle args = new Bundle();
+                args.putInt("taskId", holder.taskId);
+                myFragment.setArguments(args);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, myFragment).addToBackStack(null).commit();
             }
         });
     }

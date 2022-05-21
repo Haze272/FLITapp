@@ -270,7 +270,7 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp"
-            android:background="@color/angular">
+            android:background="@color/fortran">
 
             <TextView
                 android:id="@+id/example_tag_3_text"
@@ -279,7 +279,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/inter_bold"
                 android:paddingHorizontal="10dp"
-                android:text="Angular"
+                android:text="Fortran"
                 android:textColor="@color/btn_text"
                 android:textFontWeight="700"
                 android:textSize="16sp"
@@ -296,7 +296,7 @@
                 android:fontFamily="@font/inter_bold"
                 android:lines="1"
                 android:singleLine="true"
-                android:text="2"
+                android:text="5"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textFontWeight="700"
@@ -408,7 +408,7 @@
         </com.google.android.flexbox.FlexboxLayout>
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/openedTaskDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

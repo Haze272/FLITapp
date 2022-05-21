@@ -32,8 +32,19 @@ public class TaskRepository {
         Task result = null;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            result = tasks.stream().filter(user -> user.getHeader().equals(header)).findFirst().get();
+            result = tasks.stream().filter(task -> task.getHeader().equals(header)).findFirst().get();
         }
+
+        return result;
+    }
+
+    public Task getTaskById(int id) {
+        Task result = null;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            result = tasks.stream().filter(task -> (task.getId() == id)).findFirst().get();
+        }
+
         return result;
     }
 
