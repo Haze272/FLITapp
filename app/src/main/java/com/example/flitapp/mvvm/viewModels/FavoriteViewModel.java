@@ -4,28 +4,35 @@ import android.view.View;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.flitapp.mvvm.models.Task;
 import com.example.flitapp.mvvm.models.repositories.TagRepository;
-import com.example.flitapp.mvvm.models.repositories.TaskRepository;
+import com.example.flitapp.mvvm.models.repositories.UserRepository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SearchTasksViewModel extends ViewModel implements DisplayTasksViewModel {
-    private TaskRepository taskRepository = TaskRepository.getInstance();
+public class FavoriteViewModel extends ViewModel implements DisplayTasksViewModel {
+    private UserRepository userRepository = UserRepository.getInstance();
     private TagRepository tagRepository = TagRepository.getInstance();
 
     private MutableLiveData<ArrayList<Task>> currentTask;
 
-    public MutableLiveData<ArrayList<Task>> getActualTasks(View v) {
+    public MutableLiveData<ArrayList<Task>> getFavoriteTasks(View v) {
         if (currentTask == null) {
             currentTask = new MutableLiveData<ArrayList<Task>>();
         }
-        currentTask.setValue(taskRepository.getLatestTasks());
+        currentTask.setValue(userRepository.getFavoriteTasks(1));
 
         return currentTask;
+    }
+
+    public boolean isHasFavoriteTasks() {
+        if (userRepository.getFavoriteTasks(1) == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public HashMap<String, String> getTagColors() {

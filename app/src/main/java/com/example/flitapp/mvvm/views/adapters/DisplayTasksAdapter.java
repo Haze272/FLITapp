@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.flitapp.MainActivity;
 import com.example.flitapp.R;
 import com.example.flitapp.mvvm.models.Task;
+import com.example.flitapp.mvvm.viewModels.DisplayTasksViewModel;
 import com.example.flitapp.mvvm.viewModels.SearchTasksViewModel;
 import com.example.flitapp.mvvm.views.OpenedTaskFragment;
 import com.google.android.flexbox.FlexboxLayout;
@@ -29,15 +30,15 @@ import java.util.List;
 import java.util.Map;
 
 public class DisplayTasksAdapter extends RecyclerView.Adapter<DisplayTasksAdapter.DisplayTasksViewHolder> {
-    private SearchTasksViewModel viewModel;
+    private DisplayTasksViewModel viewModel;
 
     private ArrayList<Task> taskList;
     Context context;
 
-    public DisplayTasksAdapter(ArrayList<Task> data, Context context, SearchTasksViewModel searchTasksViewModel) {
+    public DisplayTasksAdapter(ArrayList<Task> data, Context context, DisplayTasksViewModel displayTasksViewModel) {
         this.taskList = data;
         this.context = context;
-        this.viewModel = searchTasksViewModel;
+        this.viewModel = displayTasksViewModel;
     }
 
     @NonNull

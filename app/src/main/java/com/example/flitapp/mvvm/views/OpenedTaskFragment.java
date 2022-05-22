@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -51,6 +53,13 @@ public class OpenedTaskFragment extends Fragment {
             binding.flexboxLayout.addView(setTagStyle(txtItem, tag));
         }
         binding.openedTaskDescription.setText(openedTask.getDescription());
+
+        binding.openedAddToFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewModel.addTaskToFavourite(openedTask);
+            }
+        });
     }
 
     public TextView setTagStyle(TextView element, String tag) {
