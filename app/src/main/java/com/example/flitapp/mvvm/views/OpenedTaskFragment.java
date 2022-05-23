@@ -60,6 +60,13 @@ public class OpenedTaskFragment extends Fragment {
                 viewModel.addTaskToFavourite(openedTask);
             }
         });
+
+        binding.responseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewModel.addTaskToResponses(openedTask);
+            }
+        });
     }
 
     public TextView setTagStyle(TextView element, String tag) {

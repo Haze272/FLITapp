@@ -28,4 +28,8 @@ public class OpenedTaskViewModel extends ViewModel {
     public void addTaskToFavourite(Task task) {
         userRepository.putTaskToFavorite(1, task); // userId is 1 because I haven't done yet the auth
     }
+
+    public void addTaskToResponses(Task task) {
+        userRepository.putTaskToResponses(1, task);
+    }
 }

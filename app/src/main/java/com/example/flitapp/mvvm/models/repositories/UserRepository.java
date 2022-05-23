@@ -18,6 +18,7 @@ public class UserRepository {
     private int userCounter = 1;
 
     public HashMap<Integer, HashSet<Task>> favoriteTasksOfUser = new HashMap<>();
+    public HashMap<Integer, HashSet<Task>> responseTasksOfUser = new HashMap<>();
 
     public UserRepository() {
         makeMockUser();
@@ -47,6 +48,23 @@ public class UserRepository {
         }
 
         return favoriteTasks;
+    }
+
+    public void putTaskToResponses(int userId, Task task) {
+        if (!responseTasksOfUser.containsKey(userId)) {
+            responseTasksOfUser.put(userId, new HashSet<>());
+        }
+        responseTasksOfUser.get(userId).add(task);
+    }
+
+    public ArrayList<Task> getResponseTasks(int userId) {
+        ArrayList<Task> responseTasks = null;
+
+        if (responseTasksOfUser.containsKey(userId)) {
+            responseTasks = new ArrayList<>(responseTasksOfUser.get(userId));
+        }
+
+        return responseTasks;
     }
 
     public void makeMockUser() {
