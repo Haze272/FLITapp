@@ -1,29 +1,43 @@
 package com.example.flitapp.mvvm.models.chat;
 
-import com.example.flitapp.mvvm.models.User;
-
 import java.util.Date;
 
 public class Message {
-    private User author;
-    private String text;
+    private int id;
+    private String textMessage;
     private Date date;
+    private int authorId, receiverId;
 
-    public Message(User author, String text) {
-        this.author = author;
-        this.text = text;
+    public Message(int id, String textMessage, int authorId, int receiverId) {
+        this.id = id;
+        this.textMessage = textMessage;
+        this.authorId = authorId;
+        this.receiverId = receiverId;
+
         this.date = new Date();
     }
 
-    public User getAuthor() {
-        return author;
-    }
-
-    public String getText() {
-        return text;
+    public String getTextMessage() {
+        return textMessage;
     }
 
     public Date getDate() {
         return date;
+    }
+
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getReceiverId() {
+        return receiverId;
     }
 }
