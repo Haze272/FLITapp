@@ -18,9 +18,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:weightSum="10"
-        app:layout_constraintBottom_toTopOf="@+id/char_message_text"
+        app:layout_constraintBottom_toTopOf="@+id/chat_message_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +37,9 @@
     </ScrollView>
 
     <EditText
-        android:id="@+id/char_message_text"
-        android:layout_width="333dp"
+        android:id="@+id/chat_message_text"
+        android:layout_width="0dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/main_edit_text"
         android:ems="10"
         android:hint="Введите текст"

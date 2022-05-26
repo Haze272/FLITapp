@@ -47,12 +47,14 @@
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/activity_reg_telephone_input.xml" value="0.2" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/activity_responses.xml" value="0.264" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/actual_tasks.xml" value="0.25" />
-        <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/chat.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/chat.xml" value="0.264" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/chat_tile.xml" value="0.4" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/favorites.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/fragment_task.xml" value="0.264" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/main_activity.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/message_author_fragment.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/message_receiver_fragment.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/messages_list.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/opened_task.xml" value="0.2" />
         <entry key="..\:/Users/studi/Documents/GitHub/FLITapp/app/src/main/res/layout/profile.xml" value="0.4" />

@@ -52,7 +52,7 @@ public class OpenedTaskFragment extends Fragment {
 
             binding.flexboxLayout.addView(setTagStyle(txtItem, tag));
         }
-        binding.openedTaskDescription.setText(openedTask.getDescription());
+        //binding.openedTaskDescription.setText(openedTask.getDescription());
 
         binding.openedAddToFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
