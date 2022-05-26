@@ -14,11 +14,14 @@ import java.util.List;
 public class UserRepository {
     private static UserRepository instance;
 
+    private TaskRepository taskRepository = TaskRepository.getInstance();
+
     public List<User> users = new ArrayList<>();
     private int userCounter = 1;
 
     public HashMap<Integer, HashSet<Task>> favoriteTasksOfUser = new HashMap<>();
     public HashMap<Integer, HashSet<Task>> responseTasksOfUser = new HashMap<>();
+    public HashMap<Integer, HashSet<Task>> doneTasksOfUser = new HashMap<>();
 
     public UserRepository() {
         makeMockUser();
@@ -67,6 +70,23 @@ public class UserRepository {
         return responseTasks;
     }
 
+    public void putTaskToDone(int userId, Task task) {
+        if (!doneTasksOfUser.containsKey(userId)) {
+            doneTasksOfUser.put(userId, new HashSet<>());
+        }
+        doneTasksOfUser.get(userId).add(task);
+    }
+
+    public ArrayList<Task> getDoneTasks(int userId) {
+        ArrayList<Task> doneTasks = null;
+
+        if (doneTasksOfUser.containsKey(userId)) {
+            doneTasks = new ArrayList<>(doneTasksOfUser.get(userId));
+        }
+
+        return doneTasks;
+    }
+
     public User getUserById(int userId) {
         User requiredUser = null;
 
@@ -91,6 +111,10 @@ public class UserRepository {
         User customer2 = new User(13, "Олег", "Губин", new Date(), 0, 110);
         users.add(customer2);
         userCounter++;
+
+        Task task1 = new Task(3, "Скрипт регистрации", "20 000", new String[]{"javascript", "typescript"}, "Сделать front-end скрипт", new Date());
+        taskRepository.tasks.add(task1);
+        putTaskToDone(1, task1);
     }
 
 }

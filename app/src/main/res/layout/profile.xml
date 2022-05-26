@@ -177,50 +177,6 @@
         app:showDivider="middle|beginning">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/example_tag_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp"
-            android:background="@color/html">
-
-            <TextView
-                android:id="@+id/example_tag_1_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="HTML"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
-
-            <TextView
-                android:id="@+id/example_tag_1_amount"
-                android:layout_width="20dp"
-                android:layout_height="22dp"
-                android:layout_weight="1"
-                android:background="@drawable/test_profile_tag_counter"
-                android:ellipsize="marquee"
-                android:fontFamily="@font/inter_bold"
-                android:lines="1"
-                android:singleLine="true"
-                android:text="6"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/example_tag_1_text"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints"></TextView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/example_tag_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -323,105 +279,30 @@
         app:layout_constraintStart_toStartOf="@+id/profile_tags_done"
         app:layout_constraintTop_toBottomOf="@+id/profile_tags_done" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="349dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="#EFEFEF"
-        android:paddingBottom="10dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="10"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chat_tile_name">
+        app:layout_constraintTop_toBottomOf="@+id/chat_tile_name"
+        tools:ignore="SpeakableTextPresentCheck">
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
 
-        <TextView
-            android:id="@+id/task_header_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/inter"
-            android:text="Изменить цены на сайте"
-            android:textColor="@color/black"
-            android:textFontWeight="600"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/task_price_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/inter"
-            android:text="150 $"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/flexboxLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:alignContent="flex_start"
-            app:alignItems="flex_start"
-            app:dividerDrawable="@drawable/divider"
-            app:flexWrap="wrap"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/task_header_1"
-            app:layout_constraintTop_toBottomOf="@+id/task_header_1"
-            app:layout_constraintVertical_bias="0.0"
-            app:showDivider="middle|beginning">
-
-            <TextView
-                android:id="@+id/firstTag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/modx"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="ModX"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="8dp" />
-
-            <TextView
-                android:id="@+id/wtf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/php"
-                android:fontFamily="@font/inter_bold"
-                android:paddingHorizontal="10dp"
-                android:text="PHP"
-                android:textColor="@color/btn_text"
-                android:textFontWeight="700"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="64dp" />
-
-        </com.google.android.flexbox.FlexboxLayout>
-
-        <TextView
-            android:id="@+id/chat_tile_last_message"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/inter"
-            android:text="@string/profile_task_test"
-            android:textColor="#000000"
-            android:textFontWeight="500"
-            app:layout_constraintEnd_toEndOf="@+id/task_price_1"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/flexboxLayout"
-            app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/profile_tasks_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -90,6 +90,5 @@ public class MessageRepository {
         addMessage("И тебе не хворать", 1, 12);
         addMessage("Ку!",13, 1);
         addMessage("И тебе того же", 1, 13);
-        addMessage("Делать мани", 1, 20);
     }
 }
