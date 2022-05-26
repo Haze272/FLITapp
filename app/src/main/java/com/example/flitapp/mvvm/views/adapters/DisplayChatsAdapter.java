@@ -50,7 +50,7 @@ public class DisplayChatsAdapter extends RecyclerView.Adapter<DisplayChatsAdapte
 
         holder.chatId = tempChat.getId();
 
-        holder.name.setText(Integer.toString(tempChat.getInitiatorId()));
+        holder.name.setText(viewModel.getAuthorById(tempChat.getInitiatorId()));
         holder.lastMessage.setText(tempChat.getLastMessage().getTextMessage());
     }
 

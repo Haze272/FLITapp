@@ -67,9 +67,29 @@ public class UserRepository {
         return responseTasks;
     }
 
+    public User getUserById(int userId) {
+        User requiredUser = null;
+
+        for (User user : users) {
+            if (user.getId() == userId) {
+                requiredUser = user;
+            }
+        }
+
+        return requiredUser;
+    }
+
     public void makeMockUser() {
         User user = new User(userCounter, "Степан", "Беркунов", new Date(), 0, 0);
         users.add(user);
+        userCounter++;
+
+        User customer1 = new User(12, "Андрей", "Карпатченко", new Date(), 0, 4);
+        users.add(customer1);
+        userCounter++;
+
+        User customer2 = new User(13, "Олег", "Губин", new Date(), 0, 110);
+        users.add(customer2);
         userCounter++;
     }
 

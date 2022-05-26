@@ -69,6 +69,22 @@ public class MessageRepository {
         return conversation;
     }
 
+    public int getAuthorIdByChatId(int id) {
+        int result = 0;
+
+        for (Chat chat : chats) {
+            if (chat.getId() == id) {
+                if (chat.getInitiatorId() == 1) {
+                    result = chat.getReceiverId();
+                } else if (chat.getReceiverId() == 1) {
+                    result = chat.getInitiatorId();
+                }
+            }
+        }
+
+        return result;
+    }
+
     private void fillMockChats() {
         addMessage("Привет!", 12, 1);
         addMessage("И тебе не хворать", 1, 12);

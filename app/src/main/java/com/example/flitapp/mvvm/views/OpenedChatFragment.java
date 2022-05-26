@@ -39,6 +39,8 @@ public class OpenedChatFragment extends Fragment {
         int openedId = getArguments().getInt("chatId", 0);
         viewModel.setCurrentChatId(openedId);
 
+        binding.chatNameOpponent.setText(viewModel.getAuthorById());
+
         final Observer<ArrayList<Message>> nameObserver = new Observer<ArrayList<Message>>() {
             @Override
             public void onChanged(@Nullable final ArrayList<Message> messages) {

@@ -8,11 +8,13 @@ import androidx.lifecycle.ViewModel;
 import com.example.flitapp.mvvm.models.chat.Chat;
 import com.example.flitapp.mvvm.models.chat.Message;
 import com.example.flitapp.mvvm.models.repositories.MessageRepository;
+import com.example.flitapp.mvvm.models.repositories.UserRepository;
 
 import java.util.ArrayList;
 
 public class OpenedChatViewModel extends ViewModel {
     private MessageRepository repository = MessageRepository.getInstance();
+    private UserRepository userRepository = UserRepository.getInstance();
 
     private MutableLiveData<ArrayList<Message>> currentConversation;
     private int currentChatId = 0;
@@ -32,5 +34,12 @@ public class OpenedChatViewModel extends ViewModel {
         currentConversation.setValue(repository.getMessagesByChatId(currentChatId));
 
         return currentConversation;
+    }
+
+    public String getAuthorById() {
+        String authorName = "";
+        int authodId = repository.getAuthorIdByChatId(currentChatId);
+        authorName = userRepository.getUserById(authodId).getFirstName();
+        return authorName;
     }
 }
